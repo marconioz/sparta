@@ -101,14 +101,14 @@ jnames = {'J1': 'square pyramid ',
 
 def flatten_minks(compo):
     mf = []
-    dicks = {}
+    dicts = {}
     for name, mesh in compo.items():
-        mdick = minks(mesh).minkdic
+        mdict = minks(mesh).minkdict
         print(mesh.volume)
         mink_features = {}
-        for key, value in mdick.items():
+        for key, value in mdict.items():
             if key == 'scalar':
-                dick = {n: value[n] for n in value}
+                dict = {n: value[n] for n in value}
                 mink_features[key] = {n: value[n] for n in value}
             else:
                 aux = {}
@@ -116,17 +116,20 @@ def flatten_minks(compo):
                     for p, k in enumerate(np.ravel(value[n])):
                         features = np.ravel(value[n])
                         aux[n + "_" + str(p)] = k
-                        dick[n + "_" + str(p)] = k
+                        dict[n + "_" + str(p)] = k
                 mink_features[key] = aux
-        dicks[name] = dick
+        dicts[name] = dict
         mf.append(mink_features)
-    return (dicks, mf)
+    return (dicts, mf)
 def triangulate(face):
     triangles = []
     for i in range(1, len(face) - 1):
         triangles.append([face[0], face[i], face[i + 1]])
     return (triangles)
 class Johnson_Polyhedra:
+    # this class will be a template for collections of objects without a common process behind.
+    # just visualization is implemented so far. morphometrics will follow.
+
     library = {}
 
     def __init__(self, frontend):
