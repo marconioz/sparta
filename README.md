@@ -17,7 +17,7 @@ In the next picture, we have a realization of a system of closed-packed spheres.
 
 <img src="hard_spheres_lump.png" width="555"/>
 
-The last picture shows how just 3 components among dozens --- constructed by a manifold learning technique called Umap, are enough to capture the geometrical information, continuously as a function the system's parameter (in this example packing fraction). 
+The last picture shows how just 3 components among dozens --- constructed by a manifold learning technique called Umap, are enough to capture the geometrical information, continuously as a function the system's parameter (in this example packing fraction, shown in the colorscale as class_id). As one would expect, the variability of shapes signatures are fatter around the midrange .50 for packing fraction.   
 
 <img src="umap_hard_spheres.png" width="555"/>  
 

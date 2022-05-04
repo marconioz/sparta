@@ -172,9 +172,9 @@ class Johnson_Polyhedra:
                 xaxis=dict(visible=False),
                 yaxis=dict(visible=False),
                 zaxis=dict(visible=False)),
-                width=900,
-                height=700,
-                # margin=dict(r=300, l=0,b=100, t=0)
+                width  = 700,
+                height = 700,
+                margin=dict(r=0, l=0,b=0, t=0)
             )
 
             fig.update_traces(
